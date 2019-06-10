@@ -1,0 +1,6 @@
+{
+  "default": "An unknown error code occured. This could be a problem with your internet connection. Please try again later",
+  "bad-credential": "The email address and/or password are invalid. Please check your details and try again.",
+  "not-authenticated": "You're not logged in yet",
+  "not-found": "The payment reminders are not found"
+}

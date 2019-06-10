@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`View: Alignment Renders 1`] = `
+<div
+  className="container foo"
+>
+  <div
+    className="left"
+  >
+    left
+  </div>
+  <div
+    className="center fee"
+  >
+    center with className
+  </div>
+  <div
+    className="right"
+  >
+    right
+  </div>
+</div>
+`;
