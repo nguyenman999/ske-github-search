@@ -9,7 +9,7 @@ export const initialState = {
   list: [],
 }
 
-const parseItems = items => (
+export const parseItems = items => (
   items.map(item => ({
     avatarUrl: item.avatar_url,
     type: item.type,

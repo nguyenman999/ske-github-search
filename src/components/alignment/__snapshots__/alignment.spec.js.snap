@@ -1,23 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`View: Alignment Renders 1`] = `
-<div
-  className="container foo"
+<Alignment
+  className="foo"
 >
-  <div
-    className="left"
+  <Alignment.Left
+    className=""
   >
     left
-  </div>
-  <div
-    className="center fee"
+  </Alignment.Left>
+  <Alignment.Center
+    className="fee"
   >
     center with className
-  </div>
-  <div
-    className="right"
+  </Alignment.Center>
+  <Alignment.Right
+    className=""
   >
     right
-  </div>
-</div>
+  </Alignment.Right>
+</Alignment>
 `;

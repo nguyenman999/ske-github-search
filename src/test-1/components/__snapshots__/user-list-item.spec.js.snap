@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`user-list-item render: default 1`] = `
+<Item>
+  <Skeleton
+    active={true}
+    avatar={true}
+    loading={false}
+    paragraph={true}
+    title={false}
+  >
+    <Meta
+      avatar={
+        <Avatar
+          shape="circle"
+          size="default"
+          src="avatarUrl"
+        />
+      }
+      description="type"
+      title="login"
+    />
+    <div>
+      123
+    </div>
+  </Skeleton>
+</Item>
+`;

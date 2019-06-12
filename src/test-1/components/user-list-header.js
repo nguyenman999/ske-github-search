@@ -18,7 +18,6 @@ const UserListHeader = ({ title, onChange, onSearch }) => (
         placeholder="Input search text"
         onChange={onChange}
         onSearch={onSearch}
-        style={{ width: 400 }}
       />
     </Alignment.Right>
   </Alignment>

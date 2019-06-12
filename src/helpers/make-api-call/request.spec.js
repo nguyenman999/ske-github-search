@@ -1,9 +1,7 @@
 import request, { parseResponse } from './request'
 import MMError from '../mm-error/mm-error'
-import * as jwtService from '../jwt-service'
 import * as errors from '../error-message/message.json'
 
-jest.mock('../jwt-service')
 describe('request helper', () => {
   const sampleBody = {
     foo: 'bar',
@@ -180,23 +178,6 @@ describe('request helper', () => {
     })
   })
 
-  it('should call API and update token if needed', async () => {
-    fetch.mockResponseOnce(
-      JSON.stringify({
-        foo: 'bar',
-      }),
-      {
-        status: 200,
-        headers: {
-          'refresh-token': 'test',
-        },
-      },
-    )
-    jwtService.saveToken = jest.fn()
-    await request(path, requestOptions)
-    expect(jwtService.saveToken).toBeCalledWith('test')
-  })
-
   it('should call API and receive a bundle of errors', async () => {
     const error = {
       error: [
@@ -227,6 +208,7 @@ describe('request helper', () => {
       ],
     })
   })
+
   describe('parse response', () => {
     it('should parse response when status is 204 ', async () => {
       const response = {
@@ -236,6 +218,7 @@ describe('request helper', () => {
       const result = await parseResponse(response)
       expect(result).toBeNull()
     })
+
     it('should parse response when status is 202 ', async () => {
       const response = {
         status: 202,
@@ -245,6 +228,7 @@ describe('request helper', () => {
       const result = await parseResponse(response)
       expect(result).toEqual('test')
     })
+    
     it('should parse response when status is 404', async () => {
       const response = {
         status: 202,

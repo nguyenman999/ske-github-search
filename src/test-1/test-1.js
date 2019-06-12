@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { List, Button } from 'antd'
 import UserListHeader from './components/user-list-header'
 import UserListItem from './components/user-list-item'
+import styles from './test-1.module.less'
 
 class UserList extends React.Component {
   onInputChange = (event) => {
@@ -49,13 +50,15 @@ class UserList extends React.Component {
     ) : null
 
     return (
-      <List
-        header={this.renderHeader()}
-        loading={loading}
-        loadMore={renderLoadmore}
-        dataSource={list}
-        renderItem={this.renderItem}
-      />
+      <div className={styles.container}>
+        <List
+          header={this.renderHeader()}
+          loading={loading}
+          loadMore={renderLoadmore}
+          dataSource={list}
+          renderItem={this.renderItem}
+        />
+      </div>
     )
   }
 }

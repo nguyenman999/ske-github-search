@@ -1,0 +1,8 @@
+@proximityBase: 8;
+
+.proximity(@value, @type: px) {
+  // Ant design's proximity recommends using the formula: 8 + 8n,
+  // https://ant.design/docs/spec/proximity
+  // Use this function to enforce margin, padding... to follow that pattern
+  @return: unit(@proximityBase * (1 + @value), @type);
+}

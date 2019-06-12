@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`user-list-header render: default 1`] = `
+<Alignment
+  className=""
+>
+  <Alignment.Left
+    className=""
+  >
+    <Title
+      level={4}
+    >
+      title
+    </Title>
+  </Alignment.Left>
+  <Alignment.Right
+    className=""
+  >
+    <Search
+      enterButton={false}
+      onChange={[MockFunction]}
+      onSearch={[MockFunction]}
+      placeholder="Input search text"
+    />
+  </Alignment.Right>
+</Alignment>
+`;

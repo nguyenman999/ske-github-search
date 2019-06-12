@@ -1,0 +1,7 @@
+@browserContext: 16;
+
+.rem(@pixels, @context: @browserContext) {
+  @pixelsWithUnit: if(isunit(@pixels, ''), @pixels * 1px, @pixels);
+  @contextWithUnit: if(isunit(@context, ''), @context * 1px, @context);
+  @return: @pixelsWithUnit / @contextWithUnit * 1rem;
+}

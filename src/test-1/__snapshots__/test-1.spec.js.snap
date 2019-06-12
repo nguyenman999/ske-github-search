@@ -1,0 +1,104 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test-1-view render default 1`] = `
+<div
+  className="container"
+>
+  <List
+    bordered={false}
+    dataSource={Array []}
+    header={
+      <UserListHeader
+        onChange={[Function]}
+        onSearch={[Function]}
+        title="Github Search User"
+      />
+    }
+    loadMore={null}
+    loading={false}
+    pagination={false}
+    renderItem={[Function]}
+    split={true}
+  />
+</div>
+`;
+
+exports[`test-1-view render loadmore 1`] = `
+<div
+  className="container"
+>
+  <List
+    bordered={false}
+    dataSource={
+      Array [
+        Object {
+          "avatarUrl": "avatarUrl",
+          "login": "login",
+          "score": 123,
+          "type": "type",
+        },
+      ]
+    }
+    header={
+      <UserListHeader
+        onChange={[Function]}
+        onSearch={[Function]}
+        title="Github Search User"
+      />
+    }
+    loadMore={
+      <div
+        style={
+          Object {
+            "height": 32,
+            "lineHeight": "32px",
+            "marginTop": 12,
+            "textAlign": "center",
+          }
+        }
+      >
+        <Button
+          block={false}
+          ghost={false}
+          htmlType="button"
+          loading={false}
+          onClick={[Function]}
+        >
+          loading more
+        </Button>
+      </div>
+    }
+    loading={false}
+    pagination={false}
+    renderItem={[Function]}
+    split={true}
+  />
+</div>
+`;
+
+exports[`test-1-view renderItem 1`] = `
+<Item>
+  <Skeleton
+    active={true}
+    avatar={true}
+    loading={false}
+    paragraph={true}
+    title={false}
+  >
+    <Meta
+      avatar={
+        <Avatar
+          shape="circle"
+          size="default"
+          src="avatarUrl"
+        />
+      }
+      description="type"
+      title="login"
+    />
+    <div>
+      123
+    </div>
+  </Skeleton>
+</Item>
+`;
